@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/UnoFragment">
+
+    <fragment
+        android:id="@+id/UnoFragment"
+        android:name="com.example.lc_td_final.view.UnoFragmento"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_uno_fragmento">
+
+        <action
+            android:id="@+id/action_1Fragment_to_2Fragment"
+            app:destination="@id/DosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DosFragment"
+        android:name="com.example.lc_td_final.view.DosFragmento"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_dos_fragmento">
+
+        <action
+            android:id="@+id/action_2Fragment_to_1Fragment"
+            app:destination="@id/UnoFragment" />
+    </fragment>
+</navigation>
